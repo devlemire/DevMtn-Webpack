@@ -59,3 +59,19 @@ We can install all of these using one command in our terminal window. Make sure 
   }
 }
 ````
+
+## Step 4
+### Summary
+We now have all the dependencies we need to create a React app using webpack and es6. To start configuring webpack we need to create a `webpack.config.js`.
+
+### Detailed Instructions
+Create a file in the root of the project called `webpack.config.js` and open it. In order to start creating our webpack config we have to export our module using:
+
+````js
+module.exports = {
+
+}
+````
+
+There are 3 main parts to a webpack config: entry, module, and output. Entry tells webpack where to start, it should always point to the main app component of your React application.
+

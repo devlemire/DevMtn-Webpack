@@ -130,7 +130,7 @@ var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 ````
 
-Template should take are already created index.html (./public/src/index.html) so that we don't lose our div with the id of app, filename is what to name the outputted file, and inject tells the plugin where to add the script tag.
+Template should take our already created index.html (./public/src/index.html) so that we don't lose our div with the id of app, filename is what to name the outputted file, and inject tells the plugin where to add the script tag.
 
 The final piece is to include a plugins property in your `webpack.config.js` and add our variable `HTMLWebpackPluginConfig`.
 
@@ -144,7 +144,7 @@ var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 
 module.exports = {
 	entry: [
-		'./public/src/app/app.js'
+		'./public/src/app.js'
 	],
 	module: {
 		loaders: [
@@ -158,3 +158,6 @@ module.exports = {
 	plugins: [HTMLWebpackPluginConfig]
 }
 ````
+
+### Solution
+![giphy] (https://github.com/devlemire/DevMtn-Webpack/blob/solution/readme/2g.gif)

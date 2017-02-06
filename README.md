@@ -14,3 +14,4 @@ Now that webpack is globally installed you won't have to worry about doing it ag
 ### Detailed Instructions
 Using a terminal window and being in the root folder of the project run `npm init`. Npm init runs us through creating a package.json file so we don't have to type it from scratch. Majority of the time you can just hold enter and take all the default values. In this case we'll have to change the name since capital letters are not allowed.
 ### Solution
+![giphy] (https://github.com/devlemire/DevMtn-Webpack/blob/solution/readme/1g.gif)

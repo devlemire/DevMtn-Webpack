@@ -83,7 +83,7 @@ module.exports = {
 }
 ````
 
-Module is an object take takes a loaders property. This is where we tell webpack which files to watch for and how to convert them.
+Module is an object that takes a loaders property. This is where we tell webpack which files to watch for and how to convert them.
 
 ````js
 module.exports = {
@@ -98,7 +98,7 @@ module.exports = {
 }
 ````
 
-The test property is regex saying "look for all files ending in js or jsx. The exclude is so that webpack doesn't go into each js/jsx file in our node_modules. And our loader is specified as babel-loader.
+The test property is regex saying "look for all files ending in js or jsx". The exclude is so that webpack doesn't go into each js/jsx file in our node_modules. And our loader is specified as babel-loader.
 
 Output is how we tell webpack where to take our compiled files and what to name that file.
 
@@ -116,5 +116,45 @@ module.exports = {
 		filename: 'bundle.js',
 		path: './public/dist'
 	}
+}
+````
+
+In addition to the three main components of a webpack config we are going to be using a plugin called `html-webpack-plugin`. This plugin automatically adds a script tag linked to our outputted `bundle.js` inside of our index.html.
+
+````js
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
+	template: './public/src/index.html',
+	filename: 'index.html',
+	inject: 'body'
+});
+````
+
+Template should take are already created index.html (./public/src/index.html) so that we don't lose our div with the id of app, filename is what to name the outputted file, and inject tells the plugin where to add the script tag.
+
+The final piece is to include a plugins property in your `webpack.config.js` and add our variable `HTMLWebpackPluginConfig`.
+
+````js
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
+	template: './public/src/index.html',
+	filename: 'index.html',
+	inject: 'body'
+});
+
+module.exports = {
+	entry: [
+		'./public/src/app/app.js'
+	],
+	module: {
+		loaders: [
+			{ test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader' }
+		]
+	},
+	output: {
+		filename: 'bundle.js',
+		path: './public/dist'
+	},
+	plugins: [HTMLWebpackPluginConfig]
 }
 ````

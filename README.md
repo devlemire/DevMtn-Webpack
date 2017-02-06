@@ -182,6 +182,46 @@ Our babel loader will now accept jsx and es6.
 
 ## Step 6
 ### Summary
+You now have a working environment to create a React application using webpack. To test to make sure everything is working correclty we are going to create a React component in app.js.
 
+### Detailed Instructions
+To begin using React we need to `npm install react react-dom --save`. This will put these dependencies outside our development dependencies.
+
+<details>
+<summary> webpack.config.js </summary>
+````js
+{
+  "name": "devmtn-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devlemire/DevMtn-Webpack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devlemire/DevMtn-Webpack/issues"
+  },
+  "homepage": "https://github.com/devlemire/DevMtn-Webpack#readme",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
+````
+</details>
 
 

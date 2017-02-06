@@ -30,4 +30,32 @@ Even though we've installed webpack globally, we'll still need to install it int
 
 We can install all of these using one command in our terminal window. Make sure your terminal is in the same directory as package.json and run: `npm install webpack babel-core babel-loader babel-preset-es2015 babel-preset-react html-webpack-plugin --save-dev`.
 ### Solution
-![png] (https://github.com/devlemire/DevMtn-Webpack/blob/solution/readme/2.png)
+````json
+{
+  "name": "devmtn-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devlemire/DevMtn-Webpack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devlemire/DevMtn-Webpack/issues"
+  },
+  "homepage": "https://github.com/devlemire/DevMtn-Webpack#readme",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.2.1"
+  }
+}
+````

@@ -73,5 +73,48 @@ module.exports = {
 }
 ````
 
-There are 3 main parts to a webpack config: entry, module, and output. Entry tells webpack where to start, it should always point to the main app component of your React application.
+There are 3 main parts to a webpack config: entry, module, and output. Entry tells webpack where to start, it should always point to the main app component of your React application. If we look at our current file structure our app.js is in `public/src/app.js`.
 
+````js
+module.exports = {
+	entry: [
+		'./public/src/app.js'
+	]
+}
+````
+
+Module is an object take takes a loaders property. This is where we tell webpack which files to watch for and how to convert them.
+
+````js
+module.exports = {
+	entry: [
+		'./public/src/app.js'
+	],
+	module: {
+		loaders: [
+			{ test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader' }
+		]
+	}
+}
+````
+
+The test property is regex saying "look for all files ending in js or jsx. The exclude is so that webpack doesn't go into each js/jsx file in our node_modules. And our loader is specified as babel-loader.
+
+Output is how we tell webpack where to take our compiled files and what to name that file.
+
+````js
+module.exports = {
+	entry: [
+		'./public/src/app.js'
+	],
+	module: {
+		loaders: [
+			{ test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader' }
+		]
+	},
+	output: {
+		filename: 'bundle.js',
+		path: './public/dist'
+	}
+}
+````

@@ -160,4 +160,4 @@ module.exports = {
 ````
 
 ### Solution
-![giphy] (https://github.com/devlemire/DevMtn-Webpack/blob/solution/readme/2g.gif)
+![giphy] (https://github.com/devlemire/DevMtn-Webpack/blob/solution/readme/2-1g.gif)

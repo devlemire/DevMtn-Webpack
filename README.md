@@ -188,7 +188,7 @@ You now have a working environment to create a React application using webpack. 
 To begin using React we need to `npm install react react-dom --save`. This will put these dependencies outside our development dependencies.
 
 <details>
-<summary> webpack.config.js </summary>
+<summary> package.json </summary>
 ````js
 {
   "name": "devmtn-webpack",

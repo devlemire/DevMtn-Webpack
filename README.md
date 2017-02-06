@@ -224,4 +224,56 @@ To begin using React we need to `npm install react react-dom --save`. This will 
 ````
 </details>
 
+Using es6 we can import `react` and `react-dom` to our app.js
 
+````js
+import React from 'react';
+import ReactDOM from 'react-dom';
+````
+
+After importing we can create our App class that renders "Hello world".
+
+````js
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class App extends React.Component {
+	constructor: () => {
+		super();
+	}
+
+	render: () => {
+		return (
+			<div>
+				<p> Hello World </p>
+			</div>
+		)
+	}
+}
+````
+
+And finally render it on the DOM using ReactDOM.
+
+````js
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class App extends React.Component {
+	constructor() {
+		super();
+	}
+
+	render() {
+		return (
+			<div>
+				<p> Hello World </p>
+			</div>
+		)
+	}
+}
+
+ReactDOM.render(<App />, document.getElementById('app'));
+````
+
+### Solution
+![giphy] (https://github.com/devlemire/DevMtn-Webpack/blob/solution/readme/3g.gif)

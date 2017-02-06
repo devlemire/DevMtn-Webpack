@@ -5,3 +5,5 @@
 In this repository we are going to go over how to create a React application from scratch using webpack. To start using webpack we should install it globally using npm so we can have access to it's CLI commands.
 ### Detailed Instructions
 Using a terminal window we can globally install webpack by typing `sudo npm install -g webpack`.
+### Solution
+![png] (https://github.com/devlemire/DevMtn-Webpack/blob/solution/readme/1.png)

@@ -276,4 +276,5 @@ ReactDOM.render(<App />, document.getElementById('app'));
 ````
 
 ### Solution
+Open or live-server index.html in `./public/dist/index.html`
 ![giphy] (https://github.com/devlemire/DevMtn-Webpack/blob/solution/readme/3g.gif)

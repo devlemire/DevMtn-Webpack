@@ -161,3 +161,27 @@ module.exports = {
 
 ### Solution
 ![giphy] (https://github.com/devlemire/DevMtn-Webpack/blob/solution/readme/2-1g.gif)
+
+## Step 5
+### Summary
+In order for our babel-loader to work correctly we need to tell it which loaders to use. We can accomplish this by creating a .babelrc configuration file.
+
+### Detailed Instructions
+Create a file named `.babelrc` in the root of the project. Our configuration file is going to be an object with a "presets" property.
+
+````js
+{
+	"presets": [
+		"es2015",
+		"react"
+	]
+}
+````
+
+Our babel loader will now accept jsx and es6.
+
+## Step 6
+### Summary
+
+
+

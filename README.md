@@ -6,7 +6,7 @@ In this repository we are going to go over how to create a React application fro
 ### Detailed Instructions
 Using a terminal window we can globally install webpack by typing `sudo npm install -g webpack`.
 ### Solution
-![png] (https://github.com/devlemire/DevMtn-Webpack/blob/solution/readme/1.png)
+![png](https://github.com/devlemire/DevMtn-Webpack/tree/solution/readme/1.png)
 
 ## Step 2
 ### Summary
@@ -14,7 +14,7 @@ Now that webpack is globally installed you won't have to worry about doing it ag
 ### Detailed Instructions
 Using a terminal window and being in the root folder of the project run `npm init`. Npm init runs us through creating a package.json file so we don't have to type it from scratch. Majority of the time you can just hold enter and take all the default values. In this case we'll have to change the name since capital letters are not allowed.
 ### Solution
-![giphy] (https://github.com/devlemire/DevMtn-Webpack/blob/solution/readme/1g.gif)
+![giphy](https://github.com/devlemire/DevMtn-Webpack/tree/solution/readme/1g.gif)
 
 ## Step 3
 ### Summary
@@ -160,7 +160,7 @@ module.exports = {
 ````
 
 ### Solution
-![giphy] (https://github.com/devlemire/DevMtn-Webpack/blob/solution/readme/2-1g.gif)
+![giphy](https://github.com/devlemire/DevMtn-Webpack/tree/solution/readme/2-1g.gif)
 
 ## Step 5
 ### Summary
@@ -278,4 +278,4 @@ ReactDOM.render(<App />, document.getElementById('app'));
 ### Solution
 Open or live-server index.html in `./public/dist/index.html`
 
-![giphy] (https://github.com/devlemire/DevMtn-Webpack/blob/solution/readme/3g.gif)
+![giphy](https://github.com/devlemire/DevMtn-Webpack/tree/solution/readme/3g.gif)

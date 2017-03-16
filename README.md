@@ -73,12 +73,12 @@ module.exports = {
 }
 ````
 
-There are 3 main parts to a webpack config: entry, module, and output. Entry tells webpack where to start, it should always point to the main app component of your React application. If we look at our current file structure our app.js is in `public/src/app.js`.
+There are 3 main parts to a webpack config: entry, module, and output. Entry tells webpack where to start, it should always point to the main app component of your React application. If we look at our current file structure our app.js is in `src/app.js`.
 
 ````js
 module.exports = {
 	entry: [
-		'./public/src/app.js'
+		'./src/app.js'
 	]
 }
 ````
@@ -88,7 +88,7 @@ Module is an object that takes a loaders property. This is where we tell webpack
 ````js
 module.exports = {
 	entry: [
-		'./public/src/app.js'
+		'./src/app.js'
 	],
 	module: {
 		loaders: [
@@ -105,7 +105,7 @@ Output is how we tell webpack where to take our compiled files and what to name 
 ````js
 module.exports = {
 	entry: [
-		'./public/src/app.js'
+		'./src/app.js'
 	],
 	module: {
 		loaders: [
@@ -114,7 +114,7 @@ module.exports = {
 	},
 	output: {
 		filename: 'bundle.js',
-		path: './public/dist'
+		path: __dirname + '/public'
 	}
 }
 ````
@@ -124,27 +124,27 @@ In addition to the three main components of a webpack config we are going to be 
 ````js
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-	template: './public/src/index.html',
+	template: './src/index.html',
 	filename: 'index.html',
 	inject: 'body'
 });
 ````
 
-Template should take our already created index.html (./public/src/index.html) so that we don't lose our div with the id of app, filename is what to name the outputted file, and inject tells the plugin where to add the script tag.
+Template should take our already created index.html (./src/index.html) so that we don't lose our div with the id of app, filename is what to name the outputted file, and inject tells the plugin where to add the script tag.
 
 The final piece is to include a plugins property in your `webpack.config.js` and add our variable `HTMLWebpackPluginConfig`.
 
 ````js
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-	template: './public/src/index.html',
+	template: './src/index.html',
 	filename: 'index.html',
 	inject: 'body'
 });
 
 module.exports = {
 	entry: [
-		'./public/src/app.js'
+		'./src/app.js'
 	],
 	module: {
 		loaders: [
@@ -153,7 +153,7 @@ module.exports = {
 	},
 	output: {
 		filename: 'bundle.js',
-		path: './public/dist'
+		path: __dirname + '/public'
 	},
 	plugins: [HTMLWebpackPluginConfig]
 }
@@ -164,7 +164,7 @@ module.exports = {
 
 ## Step 5
 ### Summary
-In order for our babel-loader to work correctly we need to tell it which loaders to use. We can accomplish this by creating a .babelrc configuration file.
+In order for our babel-loader to work correctly we need to tell it which loaders to use. We can accomplish this by specifying what loaders we want to use in a special '.babelrc' file in the root of our project.
 
 ### Detailed Instructions
 Create a file named `.babelrc` in the root of the project. Our configuration file is going to be an object with a "presets" property.
@@ -238,11 +238,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class App extends React.Component {
-	constructor: () => {
+	constructor() {
 		super();
 	}
 
-	render: () => {
+	render() {
 		return (
 			<div>
 				<p> Hello World </p>
@@ -276,6 +276,6 @@ ReactDOM.render(<App />, document.getElementById('app'));
 ````
 
 ### Solution
-Open or live-server index.html in `./public/dist/index.html`
+Open or live-server index.html in `./public/index.html`
 
 ![giphy](https://github.com/devlemire/DevMtn-Webpack/blob/solution/readme/3g.gif)

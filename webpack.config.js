@@ -1,13 +1,13 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-	template: './public/src/index.html',
+	template: './src/index.html',
 	filename: 'index.html',
 	inject: 'body'
 });
 
 module.exports = {
 	entry: [
-		'./public/src/app.js'
+		'./src/app.js'
 	],
 	module: {
 		loaders: [
@@ -16,7 +16,7 @@ module.exports = {
 	},
 	output: {
 		filename: 'bundle.js',
-		path: './public/dist'
+		path: __dirname + '/public'
 	},
 	plugins: [HTMLWebpackPluginConfig]
 }

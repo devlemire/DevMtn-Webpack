@@ -164,7 +164,7 @@ module.exports = {
 
 ## Step 5
 ### Summary
-In order for our babel-loader to work correctly we need to tell it which loaders to use. We can accomplish this by specifying what loaders we want to use in our `webpack.config.js` file.
+In order for our babel-loader to work correctly we need to tell it which loaders to use. We can accomplish this by specifying what loaders we want to use in a special '.babelrc' file in the root of our project.
 
 ### Detailed Instructions
 Create a file named `.babelrc` in the root of the project. Our configuration file is going to be an object with a "presets" property.

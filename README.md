@@ -77,9 +77,9 @@ There are 3 main parts to a webpack config: entry, module, and output. Entry tel
 
 ````js
 module.exports = {
-	entry: [
-		'./src/app.js'
-	]
+  entry: [
+    './src/app.js'
+  ]
 }
 ````
 
@@ -87,14 +87,14 @@ Module is an object that takes a loaders property. This is where we tell webpack
 
 ````js
 module.exports = {
-	entry: [
-		'./src/app.js'
-	],
-	module: {
-		loaders: [
-			{ test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader' }
-		]
-	}
+  entry: [
+    './src/app.js'
+  ],
+  module: {
+    loaders: [
+      { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader' }
+    ]
+  }
 }
 ````
 
@@ -104,18 +104,18 @@ Output is how we tell webpack where to take our compiled files and what to name 
 
 ````js
 module.exports = {
-	entry: [
-		'./src/app.js'
-	],
-	module: {
-		loaders: [
-			{ test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader' }
-		]
-	},
-	output: {
-		filename: 'bundle.js',
-		path: __dirname + '/public'
-	}
+  entry: [
+    './src/app.js'
+  ],
+  module: {
+    loaders: [
+      { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader' }
+    ]
+  },
+  output: {
+    filename: 'bundle.js',
+    path: __dirname + '/public'
+  }
 }
 ````
 
@@ -124,9 +124,9 @@ In addition to the three main components of a webpack config we are going to be 
 ````js
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-	template: './src/index.html',
-	filename: 'index.html',
-	inject: 'body'
+  template: './src/index.html',
+  filename: 'index.html',
+  inject: 'body'
 });
 ````
 
@@ -137,25 +137,25 @@ The final piece is to include a plugins property in your `webpack.config.js` and
 ````js
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-	template: './src/index.html',
-	filename: 'index.html',
-	inject: 'body'
+  template: './src/index.html',
+  filename: 'index.html',
+  inject: 'body'
 });
 
 module.exports = {
-	entry: [
-		'./src/app.js'
-	],
-	module: {
-		loaders: [
-			{ test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader' }
-		]
-	},
-	output: {
-		filename: 'bundle.js',
-		path: __dirname + '/public'
-	},
-	plugins: [HTMLWebpackPluginConfig]
+  entry: [
+    './src/app.js'
+  ],
+  module: {
+    loaders: [
+      { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader' }
+    ]
+  },
+  output: {
+    filename: 'bundle.js',
+    path: __dirname + '/public'
+  },
+  plugins: [HTMLWebpackPluginConfig]
 }
 ````
 
@@ -171,10 +171,10 @@ Create a file named `.babelrc` in the root of the project. Our configuration fil
 
 ````js
 {
-	"presets": [
-		"es2015",
-		"react"
-	]
+  "presets": [
+    "es2015",
+    "react"
+  ]
 }
 ````
 
@@ -187,9 +187,7 @@ You now have a working environment to create a React application using webpack. 
 ### Detailed Instructions
 To begin using React we need to `npm install react react-dom --save`. This will put these dependencies outside our development dependencies.
 
-<details>
-<summary> package.json </summary>
-````js
+```js
 {
   "name": "devmtn-webpack",
   "version": "1.0.0",
@@ -221,8 +219,7 @@ To begin using React we need to `npm install react react-dom --save`. This will 
     "react-dom": "^15.4.2"
   }
 }
-````
-</details>
+```
 
 Using es6 we can import `react` and `react-dom` to our app.js
 
@@ -238,17 +235,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class App extends React.Component {
-	constructor() {
-		super();
-	}
+  constructor() {
+    super();
+  }
 
-	render() {
-		return (
-			<div>
-				<p> Hello World </p>
-			</div>
-		)
-	}
+  render() {
+    return (
+      <div>
+        <p> Hello World </p>
+      </div>
+    )
+  }
 }
 ````
 
@@ -259,17 +256,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class App extends React.Component {
-	constructor() {
-		super();
-	}
+  constructor() {
+    super();
+  }
 
-	render() {
-		return (
-			<div>
-				<p> Hello World </p>
-			</div>
-		)
-	}
+  render() {
+    return (
+      <div>
+        <p> Hello World </p>
+      </div>
+    )
+  }
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
